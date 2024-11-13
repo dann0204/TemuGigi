@@ -10,7 +10,7 @@
 [Link Video Here](####)
 
 <h2>An application to recommends attraction to capstone project Bangkit 2024 Batch 2</h2>
-<p>Hi. this is our repository for our project in capstone project Bangkit 2023 Batch 1. Our team consist of 6 people from Machine Learning Path, Mobile Development Path and Cloud Computing Path.
+<p>Hi. this is our repository for our project in capstone project Bangkit 2023 Batch 1. Our team consist of 7 people from Machine Learning Path, Mobile Development Path and Cloud Computing Path.
 
 All of the project management we take a place with Github repository, to distinguish each path we create a different repository.</p>
 
