@@ -1,3 +1,4 @@
-/BACKEND/node_modules
-/BACKEND/.env
-/BACKEND/Dockerfile
+/Backend/node_modules
+/Backend/.env
+/Backend/Dockerfile
+/Backend/credentials.json
