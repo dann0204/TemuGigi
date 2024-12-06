@@ -41,5 +41,6 @@ Cloud Computing: We implemented API endpoints for the MD team in a Flask server 
 - Scikit-Learn
 - Kotlin
 - Retrofit
-- Flask
+- Nodejs
+- Hapijs
 - MySQL
