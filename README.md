@@ -34,13 +34,14 @@ All of the project management we take a place with Github repository, to disting
 ************
 
 ### Cloud Computing
-Cloud Computing: We implemented API endpoints for the MD team in a Flask server and integrated it with a machine learning model made by the ML team. Then, we deployed the server and the database which uses MySQL to Google Cloud.
+Cloud Computing: We implemented API endpoints for the MD on Cloud Run and integrated it with a machine learning model made by the ML team. Then, we deployed the server and the database which uses MySQL to Google Cloud.
 
 ## Tech stack
 - TensorFlow
 - Scikit-Learn
 - Kotlin
-- Retrofit
+- Reactjs
+- Tensorflowjs
 - Nodejs
 - Hapijs
 - MySQL
