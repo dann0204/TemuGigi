@@ -4,3 +4,5 @@
 /Backend/Dockerfile
 /Backend/credentials.json
 /Website/.env
+/Website/node_modules
+/Website/Build
