@@ -1,4 +1,6 @@
 /Backend/node_modules
 /Backend/.env
+/Backend/.dockerignore
 /Backend/Dockerfile
 /Backend/credentials.json
+/Website/.env
