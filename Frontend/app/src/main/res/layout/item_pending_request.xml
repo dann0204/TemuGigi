@@ -1,0 +1,45 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/patientImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_profile_placeholder"
+        android:layout_gravity="center" />
+    <ImageView
+        android:id="@+id/diseaseImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/disease_image" />
+
+    <TextView
+        android:id="@+id/patientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/patientDisease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disease" />
+
+    <TextView
+        android:id="@+id/requestedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requested At" />
+
+    <Button
+        android:id="@+id/processButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Process"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/teal_200">
+
+    <!-- Full Name -->
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lengkap"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Gender -->
+    <RadioGroup
+        android:id="@+id/gender_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <RadioButton
+            android:id="@+id/gender_male"
+            android:text="Laki-laki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/gender_female"
+            android:text="Perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <!-- Birthdate -->
+    <EditText
+        android:id="@+id/input_birthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal Lahir (YYYY-MM-DD)"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- City (For Patient) -->
+    <EditText
+        android:id="@+id/input_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kota"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> <!-- Hide for Co-Ass -->
+
+    <!-- Conditional Fields for Co-Ass -->
+    <EditText
+        android:id="@+id/input_nim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NIM"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> <!-- Hidden for Patient -->
+
+    <EditText
+        android:id="@+id/input_university"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Universitas"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> <!-- Hidden for Patient -->
+
+    <EditText
+        android:id="@+id/input_practice_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alamat Praktek"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> <!-- Hidden for Patient -->
+
+    <EditText
+        android:id="@+id/input_ktp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/input_background"
+        android:hint="No. KTP"
+        android:inputType="number"
+        android:padding="12dp"
+        android:visibility="gone"/> <!-- Hidden for Patient -->
+
+    <!-- Phone (For Co-Ass and Patient) -->
+    <EditText
+        android:id="@+id/input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nomor Telepon"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:background="@color/teal_700"/>
+
+    <!-- ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

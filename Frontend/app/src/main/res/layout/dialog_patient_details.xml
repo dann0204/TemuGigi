@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/patientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama : "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/diseaseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Penyakit :"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diskripsi :"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/requestedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requested At :"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/patientImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terima"
+        android:textColor="@color/white"
+        android:background="@color/teal_700"/>
+
+    <Button
+        android:id="@+id/rejectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tolak"
+        android:textColor="@color/white"
+        android:background="@color/teal_700"/>/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:textColor="@color/white"
+        android:background="@color/teal_700"/>/>
+</LinearLayout>

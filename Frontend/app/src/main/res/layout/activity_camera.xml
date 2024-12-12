@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/teal_200">
+
+
+    <ImageView
+        android:id="@+id/logo_klinik"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp" />
+
+
+    <ImageButton
+        android:id="@+id/btn_camera"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="@null"
+        android:contentDescription="@string/select_image"
+        android:src="@drawable/ic_camera"
+        android:padding="8dp"
+        android:scaleType="centerInside" />
+
+    <!-- Selected Image (Positioned above the 'Sudah Scan' button) -->
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/btn_camera"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside" />
+
+    <!-- Result Text View to display inference results -->
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/selected_image"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Submit" />
+    <Button
+        android:id="@+id/btn_request_meeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Meeting"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
+
+    <FrameLayout
+        android:id="@+id/floating_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/circular_background"
+        android:elevation="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_profile_placeholder"
+            android:contentDescription="Profile Icon"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_my_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Schedule"
+        android:layout_below="@id/btn_request_meeting"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+</RelativeLayout>

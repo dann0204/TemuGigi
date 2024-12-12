@@ -1,0 +1,83 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="auto">
+
+    <!-- Permissions for Internet Access -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Permissions for Camera and Media -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <!-- Permissions for Reading Images -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" android:maxSdkVersion="33"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:minSdkVersion="30" android:targetSdkVersion="33" android:maxSdkVersion="32"/>
+
+    <!-- Application Declaration -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+
+        <!-- Start Activity -->
+        <activity
+            android:name=".StartActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Camera Activity -->
+        <activity android:name=".CameraActivity" android:exported="true" />
+
+        <!-- Login Activity -->
+        <activity android:name=".LoginActivity" android:exported="true" />
+
+        <!-- Register and Forgot Password Activities -->
+        <activity android:name=".RegisterActivity" android:exported="true" />
+        <activity android:name=".ForgotPasswordActivity" android:exported="true" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".PatientListActivity" />
+        <activity android:name=".RequestProcessingActivity" />
+        <activity android:name=".ScheduleMeetingActivity" />
+        <activity android:name=".ScheduleAcceptMeetingActivity" />
+        <activity android:name=".CoassScheduleActivity" />
+        <activity android:name=".MyScheduleActivity" />
+
+
+
+
+
+
+        <!-- Main Activity -->
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".ProfileActivity" android:exported="true" />
+        <activity android:name=".EditProfileActivity" android:exported="true"/>
+        <activity android:name=".ListCoAssActivity" android:exported="true"/>
+        <activity android:name=".PatientRequestActivity" android:exported="true"/>
+        <activity android:name=".PendingRequestsActivity" android:exported="true"/>
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dicoding.myapplication.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

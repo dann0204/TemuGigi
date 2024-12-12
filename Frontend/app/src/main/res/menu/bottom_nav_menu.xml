@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_pending_requests"
+        android:icon="@drawable/ic_pending_requests"
+        android:title="Pending Requests" />
+    <item
+        android:id="@+id/nav_schedule_meeting"
+        android:icon="@drawable/ic_schedule"
+        android:title="Schedule Meeting" />
+    <item
+        android:id="@+id/nav_coass_schedule"
+        android:icon="@drawable/ic_schedule"
+        android:title="Coass Schedule" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout" />
+</menu>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="laki_laki">Laki-laki</string>
+    <string name="daftar">Daftar</string>
+    <string name="password">Password</string>
+    <string name="nomor_whatsapp">Nomor WhatsApp</string>
+    <string name="universitas">Universitas</string>
+    <string name="nim">NIM</string>
+    <string name="nomor_ktp">Nomor KTP</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="dengan_login_anda_menyetujui_ketentuan_layanan_dan_kebijakan_privasi">Dengan login, anda menyetujui Ketentuan Layanan dan Kebijakan Privasi</string>
+    <string name="belum_punya_akun_register_co_ass">Belum punya akun? Register Co-Ass</string>
+    <string name="login_co_ass">Login Co-Ass</string>
+    <string name="belum_punya_akun_register_pasien">Belum punya akun? Register Pasien</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="passwords">Password</string>
+    <string name="select_image">Select image</string>
+    <string name="change_password">Change Password</string>
+    <string name="edit_image">Edit Image</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="disease_image">Disease Image</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CircularImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="BottomNavigationViewCentered" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">24dp</item> <!-- Adjust icon size -->
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNav.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNav.Inactive</item>
+    </style>
+
+    <style name="TextAppearance.BottomNav.Active" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+    <style name="TextAppearance.BottomNav.Inactive" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/teal_200</item>
+    </style>
+
+</resources>
