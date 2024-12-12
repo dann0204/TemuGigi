@@ -42,7 +42,6 @@ const loadModel = async () => {
 };
 
 const predictDisease = async (request, h) => {
-    
     const id_patient = request.auth.credentials.id; // ID pasien dari token JWT
     const img_disease = request.file; // File yang diunggah
 
@@ -57,20 +56,20 @@ const predictDisease = async (request, h) => {
             return h.response({ message: 'Invalid image format. Only JPEG and PNG are allowed.' }).code(400);
         }
 
-        await loadModel(); // Memastikan model dimuat
+        const model = await loadModel(); // Memastikan model dimuat
 
         // Preprocessing gambar
         const tensor = tf.node
-            .decodeImage(img_disease.buffer, 3)
-            .resizeNearestNeighbor([224, 224])
-            .expandDims(0)
+            .decodeImage(img_disease.buffer, 3) // Decode buffer menjadi tensor
+            .resizeNearestNeighbor([150, 150]) // Pastikan ukuran sesuai dengan input model
+            .expandDims(0) // Tambahkan dimensi batch
             .toFloat()
-            .div(tf.scalar(255));
+            .div(tf.scalar(255)); // Normalisasi
 
         // Prediksi menggunakan model
         const prediction = model.predict(tensor);
         const scores = Array.from(await prediction.data());
-        const labels = ['Caries', 'Gingivitis', 'Mouth Ulcer', 'Random', 'Tooth Discoloration'];
+        const labels = ['Calculus', 'Caries', 'Gingivitis', 'Mouth Ulcer', 'Tooth Discoloration', 'Hypodontia', 'Random'];
         const maxScoreIndex = scores.indexOf(Math.max(...scores));
         const confidence = scores[maxScoreIndex];
         const disease_name = labels[maxScoreIndex];
@@ -85,17 +84,17 @@ const predictDisease = async (request, h) => {
         const description = `Diagnosis menunjukkan ${disease_name} dengan tingkat kepercayaan ${(confidence * 100).toFixed(2)}%.`;
         const model_version = 'v1.1';
 
-        //Me Generate nama file unik
+        // Generate nama file unik
         const randomString = crypto.randomBytes(2).toString('hex');
         const newFileName = `disease/${randomString}-${id_patient}.jpg`;
 
-        //Upload gambar ke GCS
+        // Upload gambar ke GCS
         const newImageUrl = await uploadToGCS(img_disease.buffer, newFileName);
 
-        //Format SQL dengan zona waktu
-        const diagnosisDate = moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'); 
+        // Format tanggal diagnosis dengan zona waktu Asia/Jakarta
+        const diagnosisDate = moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss');
 
-        //Checking apakah sudah ada diagnosis sebelumnya
+        // Cek apakah ada diagnosis sebelumnya
         const [existingDiagnosis] = await pool.query(
             'SELECT Img_disease FROM Diagnose WHERE Id_patient = ?',
             [id_patient]
@@ -104,8 +103,9 @@ const predictDisease = async (request, h) => {
         if (existingDiagnosis.length > 0) {
             const oldImageUrl = existingDiagnosis[0].Img_disease;
             const oldFileName = oldImageUrl.split('/').pop();
+
             if (oldFileName !== newFileName) {
-                await deleteFromGCS(`disease/${oldFileName}`); // Hapus file lama
+                await deleteFromGCS(`disease/${oldFileName}`); // Hapus file lama dari GCS
             }
 
             // Update diagnosis
