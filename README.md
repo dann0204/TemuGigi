@@ -1,7 +1,7 @@
 # TemuGigi - Capstone Project
   
 <p align="center">
-    <img src="https://github.com/
+    <img src="https://github.com/dann0204/TemuGigi/blob/main/temugigilogo.png?raw=true" alt="Wisnu Logo" width="320">
 </p>
 
 </br>
