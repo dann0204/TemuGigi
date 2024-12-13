@@ -1,4 +1,4 @@
-# TemuGigi - 
+# TemuGigi - Capstone Project
   
 <p align="center">
     <img src="https://github.com/
@@ -7,7 +7,7 @@
 </br>
 
 ## Demo Videos
-[[Link Video Here]](https://youtu.be/SQjsCOr0V8c?si=0OMHMvrOfxLyWB3F)
+[[Link Video Here](https://youtu.be/SQjsCOr0V8c?si=0OMHMvrOfxLyWB3F)]
 
 <h2>An application to recommends attraction to capstone project Bangkit 2024 Batch 2</h2>
 <p>Hi. this is our repository for our project in capstone project Bangkit 2023 Batch 1. Our team consist of 7 people from Machine Learning Path, Mobile Development Path and Cloud Computing Path.
