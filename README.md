@@ -7,7 +7,7 @@
 </br>
 
 ## Demo Videos
-[Link Video Here](####)
+[[Link Video Here]](https://youtu.be/SQjsCOr0V8c?si=0OMHMvrOfxLyWB3F)
 
 <h2>An application to recommends attraction to capstone project Bangkit 2024 Batch 2</h2>
 <p>Hi. this is our repository for our project in capstone project Bangkit 2023 Batch 1. Our team consist of 7 people from Machine Learning Path, Mobile Development Path and Cloud Computing Path.
@@ -28,20 +28,20 @@ All of the project management we take a place with Github repository, to disting
 
 ## Description About Our Project
 ### Machine Learning
-************
+Our project used machine learning to help dental students to diagnose dental problems through image analysis. We used TensorFlow to create a model that can recognize different types of dental images. We then deployed the model to TensorFlow Lite and TensorFlow.js so that it could be used on different devices. To improve the performance of the model, we adopted transfer learning techniques by utilizing pre-trained models, MobileNet. We customize the final layer of the model to suit the type of dental problem we want to detect. In addition, we use data augmentation techniques to expand the variety of datasets to improve the model’s ability to recognize images from various real-world conditions. With the combination of transfer learning and data augmentation, our model can be trained more efficiently and achieve high accuracy even with limited datasets.
 
 ### Mobile Development 
-************
+The project leverages the skills acquired through the Mobile Development Learning Path, integrating seamless design and functionality to deliver an intuitive user experience. Our goals include developing core features such as event listing, detail viewing, and user interaction.
 
 ### Cloud Computing
-Cloud Computing: We implemented API endpoints for the MD on Cloud Run and integrated it with a machine learning model made by the ML team. Then, we deployed the server and the database which uses MySQL to Google Cloud.
+We gathered requirements and designed the database schema, implementing it in Cloud SQL (MySQL) to support the core functionalities of the project. Backend APIs were built using Node.js with the Hapi.js framework to ensure scalability and maintainability. Machine learning models were analyzed and processed using TensorFlow.js, and API endpoints were developed to support data interactions. A dynamic and responsive website was built with ReactJS, enhancing user experience. To streamline deployment and ensure consistency across environments, we containerized the backend and frontend applications using Docker. These container images were stored securely in the Google Cloud Container Registry and deployed on Cloud Run for a scalable, serverless solution. Static assets, such as profile pictures and images, were managed with Google Cloud Storage, ensuring high availability and performance. To ensure functionality, we implemented and tested the database and backend services using Postman, creating a comprehensive Postman collection for further development and maintenance. Infrastructure costs were estimated using the GCP pricing calculator, ensuring cost-efficient deployment. This integrated approach utilized modern tools and cloud technologies to streamline the development process, improve scalability, and deliver a robust application.
 
 ## Tech stack
-- TensorFlow
-- Scikit-Learn
+- NodeJS with HapiJS
+- Docker
+- TensorflowJS
+- ReactJS
+- Python
+- Keras
 - Kotlin
-- Reactjs
-- Tensorflowjs
-- Nodejs
-- Hapijs
-- MySQL
+- Cloud SQL
